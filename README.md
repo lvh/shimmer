@@ -1,36 +1,21 @@
 # shimmer
 
-FIXME: description
+Composable, arbitrary-precision reduced-authority credentials for
+otherwise blissfully unaware REST APIs.
+
+This is a highly experimental hack day project.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://www.github.com/lvh/shimmer
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar shimmer-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ lein run
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 the authors (see AUTHORS)
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
