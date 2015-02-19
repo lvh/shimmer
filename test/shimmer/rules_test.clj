@@ -8,4 +8,8 @@
     (is (r/match* {:request-method :post
                    :headers {"host" "localhost"}}
                   [{:request-method :post
-                    :headers {"host" "localhost"}}]))))
+                    :headers {"host" "localhost"}}])))
+  (testing "no match"
+    (is (not (r/match* {:request-method :post
+                        :headers {"host" "localhost"}}
+                       [])))))
