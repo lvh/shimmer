@@ -12,6 +12,6 @@
 (defn match*
   "Checks if a request matches a set of features."
   [req features]
-  (not= (l/run* [q]
+  (not= (l/run 1 [q]
           (conds (map (partial l/featurec req) features)))
         '()))
