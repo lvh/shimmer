@@ -8,6 +8,11 @@
 
                  ;; HTTP magic
                  [aleph "0.4.0-beta3"]
+
+                 ;; Logging
+                 [com.taoensso/timbre "3.4.0"
+                  :exclusions [org.clojure/clojure]]
+
                  [ring/ring-mock "0.2.0"]]
   :main ^:skip-aot shimmer.core
   :target-path "target/%s"
