@@ -1,6 +1,18 @@
 (ns shimmer.rules
   (:require [clojure.core.logic :as l]))
 
+(defn match
+  "Checks if the request is allowed."
+  [req]
+  (not= (l/run 1 [q]
+          (l/conde
+           [(l/featurec req {:request-method :get})]
+           [(l/featurec req {:request-method :post
+                             :headers {"x-some-header" "the right header value"}})]
+           [(l/featurec req {:request-method :post})
+            (l/featurec req {:headers {"x-some-header" "another right header value"}})]))
+        '()))
+
 (defn ^:private conds
   "Like conde, but a function."
   [goals]
