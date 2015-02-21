@@ -4,8 +4,6 @@
             [taoensso.timbre :refer [info spy]]
             [aleph.http :refer [start-server request]]))
 
-request
-
 (defn build-handler
   [target-host target-port]
   (let []
